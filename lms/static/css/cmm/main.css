@@ -10902,7 +10902,7 @@ hr.light {
 }
 
 .page-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 #mainNav {
@@ -10986,10 +10986,6 @@ header.masthead {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-}
-
-header.index {
-    background-image: url("../img/header.jpg");
 }
 
 header.courses {

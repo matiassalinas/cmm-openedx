@@ -7,62 +7,35 @@ from django.core.urlresolvers import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
-<%block name="headextra">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-##	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-</%block>
 
 <style>
-
-.carousel-background {
-	background: none !important;
-	box-shadow: none !important;
-}
-
-.secondary {
-	margin: 40px 40px 0 0 !important;
-}
-
-@media (min-width: 768px) {
-.content-wrapper {
-	padding: 0;
-}
+	header.index {
+		background-image: url(${static.url('new-cmm/images/header.jpg')});
+	}
 
 </style>
 
-<main id="main" aria-label="Content" tabindex="-1">
-	<section class="home">
-		<header class="carousel-background">
-			<div id="carouselEol" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img class="d-block w-100" src="${static.url('eduabierta/images/banner/banner00.svg')}" alt="">
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="${static.url('eduabierta/images/banner/banner01.svg')}" alt="">
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="${static.url('eduabierta/images/banner/banner02.svg')}" alt="">
-					</div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselEol" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Anterior</span>
+<!-- Masthead -->
+<header class="masthead index">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold wow animated fadeInDown">CMM Edu Formación</h1>
+                <hr class="divider my-4">
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5 wow animated bounceIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                <a class="btn btn-primary btn-xl js-scroll-trigger wow animated zoomIn delay-1s faster" href="/courses" target="">Explorar Cursos</a>
+            </div>
+            <div class="col-lg-8 align-self-baseline wow animated infinite pulse slower">
+                <h4 class="text-white font-weight-bold mb-5">Conoce más de nosotros</h4>
+				<a class="text-white js-scroll-trigger" style="text-decoration: none;" href="#edu_formacion">
+					<i class="fas fa-angle-double-down fa-4x"></i>
 				</a>
-				<a class="carousel-control-next" href="#carouselEol" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Siguiente</span>
-				</a>
-			</div>
-		</header>
-	</section>
-	<section class="home">
-		<div class="container" style="">
-		<%include file="${courses_list}" />
-	</div>
-    </section>
-</main>
+            </div>
+        </div>
+    </div>
+</header>
 
 % if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">
@@ -71,6 +44,252 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
   </section>
 % endif
+
+<!-- Edu Formación Section -->
+<section class="page-section bg-light" id="edu_formacion">
+	<div class="container">
+		<h2 class="text-center mt-0 wow animated fadeInDown">Qué es Edu Formación</h2>
+		<hr class="divider my-4">
+		<div class="row wow animated fadeInUp">
+			<div class="col-md-5 my-auto">
+				<img src="${static.url('new-cmm/images/example_01.png')}" class="responsive-img" alt="">
+			</div>
+			<div class="col-md-7 my-2 text-justify">
+				<p><span class="text-primary">CMM Edu Formación</span> es una plataforma de cursos online que busca contribuir a la mejora de la calidad de la <span class="text-primary">enseñanza de la matemática escolar</span> atendiendo a las necesidades
+					de formación y desarrollo profesional de los distintos actores que componen el sistema.</p>
+				<p>Los cursos de esta plataforma han sido desarrollados por el <a href="http://www.cmm.uchile.cl/" target="_blank">Área de Educación del Centro de Modelamiento Matemático (CMM Edu) de la Universidad de Chile</a> para responder a requerimientos
+					clave en las líneas de formación inicial docente, desarrollo profesional, formación de asesores, entre otras.</p>
+				<p>El diseño de los cursos utiliza las potencialidades que ofrece la <a href="https://eol.uchile.cl/" target="_blank">Plataforma de Educación Online de la Universidad de Chile (EOL)</a>, para lograr una experiencia de aprendizaje significativa en modalidad virtual.</p>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Programas Section -->
+<section class="page-section bg-dark" id="programas">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-white mt-0 wow animated fadeInDown">Programas en Edu Formación</h2>
+                <hr class="divider light my-4">
+                <p class="text-white-50 mb-4 wow animated fadeInDown">Desarrollamos líneas de trabajo enfocadas a todos los niveles del sistema educativo desde una mirada sistémica, para lo cual ofrecemos distintas instancias formativas. Cada una de ellas tiene como objetivo potenciar y fortalecer la
+                    enseñanza y el aprendizaje de la matemática en distintos niveles. Para esto, hemos identificado actores clave de la comunidad educativa para los cuales hemos desarrollado programas que se adecuen a sus necesidades. </p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center wow animated zoomIn">
+            <div class="my-3 col-md-4  col-xl-25">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${static.url('new-cmm/images/example_02.png')}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title text-white">Formación Inicial Docente</h6>
+                        <p class="card-text text-justify">En CMMEdu trabajamos generando metodologías vanguardistas para la formación inicial de profesores de matemática tanto en Educación Básica como en Educación Media. </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a role="button" class="btn btn-sm btn-primary" href="http://www.cmm.uchile.cl/" target="_blank">VER MÁS ++</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 col-md-4  col-xl-25">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${static.url('new-cmm/images/example_03.png')}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title text-white">Formación Profesional Docente</h6>
+                        <p class="card-text text-justify">En CMMEdu trabajamos generando metodologías vanguardistas para la formación inicial de profesores de matemática tanto en Educación Básica como en Educación Media.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a role="button" class="btn btn-sm btn-primary" href="http://www.cmm.uchile.cl/" target="_blank">VER MÁS +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 col-md-4  col-xl-25">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${static.url('new-cmm/images/example_04.png')}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title text-white">Formación de Asesores</h6>
+                        <p class="card-text text-justify">En CMMEdu trabajamos generando metodologías vanguardistas para la formación inicial de profesores de matemática tanto en Educación Básica como en Educación Media.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a role="button" class="btn btn-sm btn-primary" href="http://www.cmm.uchile.cl/" target="_blank">VER MÁS +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 col-md-4  col-xl-25">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${static.url('new-cmm/images/example_02.png')}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title text-white">Postítulos</h6>
+                        <p class="card-text text-justify">En CMMEdu trabajamos generando metodologías vanguardistas para la formación inicial de profesores de matemática tanto en Educación Básica como en Educación Media.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a role="button" class="btn btn-sm btn-primary" href="http://www.cmm.uchile.cl/" target="_blank">VER MÁS +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 col-md-4  col-xl-25">
+                <div class="card h-100">
+                    <img class="card-img-top" src="${static.url('new-cmm/images/example_02.png')}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title text-white">Formación para Directivos</h6>
+                        <p class="card-text text-justify">En CMMEdu trabajamos generando metodologías vanguardistas para la formación inicial de profesores de matemática tanto en Educación Básica como en Educación Media. </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a role="button" class="btn btn-sm btn-primary" href="http://www.cmm.uchile.cl/" target="_blank">VER MÁS +</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modo Instruccional Section -->
+<section class="page-section" id="modelo_instruccional">
+    <div class="container">
+        <h2 class="text-center mt-0 wow animated fadeInDown">Modelo Instruccional</h2>
+        <hr class="divider my-4">
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('new-cmm/images/mi_01.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Aprender haciendo</h2>
+                <p class="lead">Las actividades de aprendizaje, permiten que los participantes interactúen directamente con problemas contextualizados al ámbito escolar, y aprendan en la medida que van desarrollando los ejercicios y actividades que se despliegan
+                    en complejidad creciente.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('new-cmm/images/mi_02.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Construcción de conocimiento guiado</h2>
+                <p class="lead">Cada curso propone a los participantes una ruta de aprendizaje que cuenta con el apoyo especializado de docentes y tutores, que acompañan, motivan, evalúan y orientan la construcción de conocimiento en torno a la temática del curso
+                    estudiado.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('new-cmm/images/mi_03.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Resolución de problemas como eje articulador</h2>
+                <p class="lead">Para desarrollar la competencia matemática, un aspecto central es la capacidad de enfrentar y resolver situaciones que escapan a nuestro marco de respuestas tradicionales. En este sentido, nuestros cursos y actividades de aprendizaje
+                    en línea, apuntan a considerar en su estructura de diseño, la resolución de problemas como elemento transversal que otorga sentido y dirección al aprendizaje.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('new-cmm/images/mi_04.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Plataforma estable y segura</h2>
+                <p class="lead">El espacio donde se desarrollan las actividades de aprendizaje, se denomina Open Edx, y es una plataforma virtual actualizada y en desarrollo permanente, que permite la creación e impartición de cursos en línea, masivos y con una gran
+                    variedad de herramientas para la gestión del contenido y la evaluación. Ofrece gran estabilidad y sistemas de seguridad de clase mundial.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('new-cmm/images/mi_05.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Aprendizaje en entorno virtual que favorece la creación, reflexión y significado</h2>
+                <p class="lead">La plataforma en que se desarrollan las actividades de aprendizaje e interacción con materiales y personas, está diseñada para favorecer la participación activa de los estudiantes con otros y con los materiales, en contextos pertinentes
+                    y orientada a la construcción de aprendizajes amplios, ricos y con sentido.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonios Section -->
+<section class="page-section bg-secondary" id="testimonios">
+    <div class="container">
+        <div class="row justify-content-center wow animated fadeInDown">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">Testimonios</h2>
+                <hr class="divider my-4">
+            </div>
+        </div>
+        <div class="row wow animated zoomIn">
+            <div class="col-md-11 col-center m-auto">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">He tenido la gran oportunidad de conocer Suma y Sigue, como una plataforma de e-learning, diseñado para trabajar y desarrollar conceptos matemáticos. Me parece un material muy bien pensado y de hecho es un gusto
+                                        encontrarse con un material de la calidad de este.</p>
+                                    <p class="overview"><b>Mónica San Pedro</b>, Suma y Sigue </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">Mis expectativas siempre fueron bien altas y las he ido cumpliendo porque las actividades son de un nivel matemático y un nivel de abordaje que generan reflexión en cualquier persona, independiente de si uno tiene
+                                        pocos años de experiencia o tiene un postgrado. También es un curso que insta a la reflexión, al trabajo colaborativo y a aprender más de matemática y a cómo enseñar esa matemática.</p>
+                                    <p class="overview"><b>Nielka</b>, Curso de formadores</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">Ojalá, todos los profesores de mi colegio pudiesen participar en este curso, porque de alguna manera van a sentir más reforzados todos sus conocimientos y de esta manera entregar una mejor educación a nuestros niños.</p>
+                                    <p class="overview"><b>Andrea Quintana</b>, Suma y Sigue</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">Creo que es potentísimo el poder compartir con otros colegas que vivimos las mismas experiencias durante mucho tiempo y que nunca hemos tenido la oportunidad de establecer una interacción con pares, no es cierto,
+                                        que trabajamos en lo mismo; yo creo que esta oportunidad que se tiene hoy día para nosotros es única y es inédita. </p>
+                                    <p class="overview"><b>Rene Barraza</b>, Curso de formadores </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">A mi me ha sido de gran utilidad porque me ha permitido replantear la forma en que yo tengo que entregar los conocimientos para un futuro profesor, que no es lo mismo que si yo estuviese enseñando matemática a un
+                                        ingeniero, aquí hay una reflexión, análisis, una argumentación, entonces esto me ha hecho ver de otra manera mi práctica pedagógica para con los futuros docentes. </p>
+                                    <p class="overview"><b>Ximena Gajardo</b>, Curso de formadores</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-box"><img src="${static.url('new-cmm/images/testimonio1.png')}" alt=""></div>
+                                    <p class="testimonial">La participación sobre todo es activa, porque en el caso mío, también lo llevo a la práctica con los niños. Entonces, sobretodo en la parte de resolución de problemas, es totalmente activa porque tu estás pasando
+                                        algunos contenidos y lo llevas a la práctica con lo que estás aprendiendo acá en el curso.</p>
+                                    <p class="overview"><b>Renzo León</b>, Suma y Sigue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <img src="${static.url('new-cmm/images/left_arrow.png')}" alt="">
+                    </a>
+                    <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                        <img src="${static.url('new-cmm/images/right_arrow.png')}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <%block name="js_extra">
    <script type="text/javascript">

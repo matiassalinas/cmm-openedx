@@ -41,6 +41,10 @@ if it's not present, don't show loader */
     background: url(../img/loader.gif) center no-repeat #fff;
 }
 
+main.static_pages {
+    margin: 0px;
+}
+
 
 /*
 * LOGO
@@ -60,7 +64,12 @@ if it's not present, don't show loader */
     padding: 0px;
 }
 
-.container-navbar .btn {
+.container-navbar a:hover {
+    text-decoration: none !important;
+}
+
+.container-navbar .btn,
+.container-navbar .navbar-toggler {
     letter-spacing: 0px;
     background-image: none;
     box-shadow: none;
@@ -73,7 +82,15 @@ if it's not present, don't show loader */
     background-image: none;
 }
 
-.container-navbar .btn:active {
+.container-navbar .navbar-toggler:hover {
+    background-image: none;
+    background-color: white;
+}
+
+
+.container-navbar .btn:active,
+.container-navbar .navbar-toggler:active,
+.container-navbar .navbar-toggler:focus {
     box-shadow: none;
 }
 
@@ -87,6 +104,21 @@ if it's not present, don't show loader */
     background-color: #929292;
 }
 
+/*
+* index 
+*/
+
+.main-container {
+    margin-top: 72px;
+}
+
+.content-wrapper {
+    padding: 0;
+}
+
+hr.divider {
+    margin: 0 auto;
+}
 
 /*
 * que es
@@ -101,6 +133,11 @@ if it's not present, don't show loader */
     border-top: 15px solid white;
     border-bottom: 15px solid var(--primary);
 }
+
+#edu_formacion a {
+    color: var(--primary);
+}
+
 
 
 /* Programas*/
@@ -139,6 +176,11 @@ if it's not present, don't show loader */
 
 #programas .card-footer .btn {
     width: 100%;
+}
+
+#programas a:focus {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
 
@@ -346,7 +388,6 @@ if it's not present, don't show loader */
 */
 
 #help {
-    margin-top: 2rem;
     padding-bottom:1rem;
 }
 
@@ -373,25 +414,40 @@ if it's not present, don't show loader */
     }
 }
 
+#help .accordion {
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+
 #help .card-header {
     padding: 0;
     background-color: var(--primary);
+    border: var(--primary);
+    padding: 0.375rem 0.75rem;
+    letter-spacing: 0px;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 #help .card-body {
     text-align: justify;
+    padding: 1.25rem;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }
 
 #help .card-header .accordion-text {
     float: left;
+    text-align: justify;
 }
 
-#help .card-header .btn-block .accordion-icon {
-    float: right;
-    content: url(../img/top_arrow.png);
-}
+/*
+* Footer
+*/
 
-#help .card-header .btn-block.collapsed .accordion-icon {
-    float: right;
-    content: url(../img/down_arrow.png);
+footer a {
+    color: var(--primary) !important;
 }

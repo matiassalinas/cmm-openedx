@@ -24,7 +24,7 @@ from six import text_type
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto my-2 my-lg-0">
         <li class="nav-item my-auto">
-            <a class="nav-link js-scroll-trigger active" href="/">Inicio</a>
+            <a class="nav-link js-scroll-trigger" href="/">Inicio</a>
         </li>
         <li class="nav-item my-auto">
             <a class="nav-link js-scroll-trigger" href="/about">Explorar Cursos</a>
@@ -35,16 +35,16 @@ from six import text_type
         % if allows_login:
           % if restrict_enroll_for_course:
             <li class="nav-item my-auto mx-1 ml-lg-3 py-1">
-                <button class="btn btn-login"><i class="fas fa-user-graduate"></i> Ingresar</button>
+                <a href="/login"><button class="btn btn-login"><i class="fas fa-user-graduate"></i> Ingresar</button></a>
             </li>
           % else:
             % if allow_public_account_creation:
               <li class="nav-item my-auto mx-1 ml-lg-3 py-1">
-                  <button class="btn btn-register"><i class="fas fa-user-plus"></i> Registrar</button>
+                <a href="/register"><button class="btn btn-register"><i class="fas fa-user-plus"></i> Registrar</button></a>
               </li>
             % endif
             <li class="nav-item my-auto mx-1 ml-lg-3 py-1">
-                <button class="btn btn-login"><i class="fas fa-user-graduate"></i> Ingresar</button>
+                <a href="/login"><button class="btn btn-login"><i class="fas fa-user-graduate"></i> Ingresar</button></a>
             </li>
           % endif
         %endif
