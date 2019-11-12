@@ -96,13 +96,11 @@ from pipeline_mako import render_require_js_path_overrides
     <%static:css group='${self.attr.main_css}'/>
   % endif
 
+<link rel="stylesheet" href="${static.url('new-cmm/vendor/animate/animate.css')}">
 <link rel="stylesheet" href="${static.url('new-cmm/css/cmm/main.css')}">
 <link rel="stylesheet" href="${static.url('new-cmm/css/cmm/custom.css')}">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-<!-- CMM -->
-<script src="${static.url('new-cmm/vendor/jquery/jquery.min.js')}"></script>
-<!-- end CMM -->
 <style>
 
     @font-face {
@@ -232,6 +230,10 @@ from pipeline_mako import render_require_js_path_overrides
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/header/header.js')}"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
+  <!-- CMM -->
+  <script src="${static.url('new-cmm/vendor/animate/wow.js')}"></script>
+  <script src="${static.url('new-cmm/vendor/jquery-easing/jquery.easing.min.js')}"></script>
+  <!-- end CMM -->
 </body>
 </html>
 
