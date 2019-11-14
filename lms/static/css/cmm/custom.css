@@ -384,6 +384,14 @@ hr.divider {
     color: var(--primary);
 }
 
+#course .preview .btn:hover,
+#course .preview .btn:focus {
+    background-image: none;
+    background-color: var(--primary);
+    box-shadow: none;
+    border: transparent;
+}
+
 /*
 * Help page
 */
