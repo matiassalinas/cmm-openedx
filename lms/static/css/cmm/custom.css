@@ -16,8 +16,8 @@ header.masthead:after{
 */
 
 
-/* Loader 
-This only works with JavaScript, 
+/* Loader
+This only works with JavaScript,
 if it's not present, don't show loader */
 
 .no-js #loader {
@@ -69,7 +69,8 @@ main.static_pages {
 }
 
 .container-navbar .btn,
-.container-navbar .navbar-toggler {
+.container-navbar .navbar-toggler,
+#courses .btn {
     letter-spacing: 0px;
     background-image: none;
     box-shadow: none;
@@ -105,7 +106,7 @@ main.static_pages {
 }
 
 /*
-* index 
+* index
 */
 
 .main-container {
