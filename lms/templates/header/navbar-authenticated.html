@@ -36,58 +36,22 @@ from six import text_type
   is_about = course and (request.path == reverse('about_course', args=[text_type(course.id)]))
 %>
 
-<style>
-% if not course or is_about:
-.main-navbar {
-  margin: 50px 0 0 50px !important;
-}
-% endif
-</style>
-
-<div class="nav-links">
-  <div class="main main-navbar">
-    % if show_dashboard_tabs or not course or is_about:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="${'active ' if active_dashboard else ''}tab-nav-link" href="${reverse('dashboard')}">
-          ${_("Courses")}
-        </a>
-      </div>
-      % if show_program_listing:
-        <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-          <a class="${'active ' if active_program_list else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-            ${_("Programs")}
-          </a>
-        </div>
-      % endif
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="${'active ' if active_user_profile  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
-          ${_("Profile")}
-        </a>
-      </div>
-      % if show_explore_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="${'active ' if active_explore else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('Discover New')}</a>
-      </div>
-      % endif
-    % endif
-    % if show_sysadmin_dashboard:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        ## Translators: This is short for "System administration".
-        <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-      </div>
-    % endif
-  </div>
-  <div class="secondary">
-    % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-          <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
-        </a>
-      </div>
-    % endif
-    <div class="mobile-nav-item hidden-mobile nav-item">
-      <a class="help-link" href="${help_link}" target="_blank">${_("Help")}</a>
-    </div>
-    <%include file="user_dropdown.html"/>
-  </div>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <li class="nav-item my-auto">
+            <a class="nav-link js-scroll-trigger" href="/">Inicio</a>
+        </li>
+        <li class="nav-item my-auto">
+            <a class="nav-link js-scroll-trigger" href="/courses">Explorar Cursos</a>
+        </li>
+        <li class="nav-item my-auto">
+            <a class="nav-link js-scroll-trigger" href="/faq">Ayuda</a>
+        </li>
+        <li class="nav-item my-auto">
+            <a class="nav-link js-scroll-trigger" href="${reverse('dashboard')}">${_("Courses")} Inscritos</a>
+        </li>
+        <li class="nav-item dropdown my-auto mx-1 ml-lg-3 py-1">
+            <%include file="user_dropdown.html"/>
+        </li>
+    </ul>
 </div>

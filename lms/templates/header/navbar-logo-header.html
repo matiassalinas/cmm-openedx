@@ -17,6 +17,3 @@ from branding import api as branding_api
 <%block name="navigation_logo">
 <a class="navbar-brand js-scroll-trigger" href="/"><img class="logo" src="${branding_api.get_logo_url(is_secure)}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"></a>
 </%block>
-<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
