@@ -5857,7 +5857,7 @@ a.badge-dark.focus {
     }
 }
 
-.progress {
+div.progress {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5868,7 +5868,7 @@ a.badge-dark.focus {
     border-radius: 0.25rem;
 }
 
-.progress-bar {
+div.progress-bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

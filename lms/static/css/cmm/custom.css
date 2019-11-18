@@ -105,6 +105,14 @@ main.static_pages {
     background-color: #929292;
 }
 
+.container-navbar .dropdown-menu .dropdown-item:hover,
+.container-navbar .dropdown-menu .dropdown-item:active{
+    color: var(--primary) !important;
+    background-color: #f8f9fa !important;
+}
+
+
+
 /*
 * index
 */
@@ -453,10 +461,23 @@ hr.divider {
     text-align: justify;
 }
 
+#help .btn-submit:hover,
+#help .btn-submit:focus {
+    background-image: none;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
 /*
 * Footer
 */
 
 footer a {
     color: var(--primary) !important;
+}
+
+footer div {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
