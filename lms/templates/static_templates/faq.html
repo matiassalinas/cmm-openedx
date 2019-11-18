@@ -61,15 +61,15 @@
             <div id="contact" class="col-lg-6 mh-100 py-4 px-5 wow animated fadeInRight">
                 <div class="help-container">
                     <h4 class="mb-4 text-white">Contáctanos</h4>
-                    <form>
+                    <form id="contact_form" action="http://msalinas.cl/eol/contact.php" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="topic" required>
+                            <select class="form-control" id="topic" name="topic" required>
                                 <option value="" disabled selected><< Asunto >></option>
                                 <option>Asunto/Motivo 1</option>
                                 <option>Asunto/Motivo 2</option>
@@ -79,10 +79,31 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" rows="3" placeholder="Mensaje" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-submit btn-primary float-right px-5 py-2 mr-3">ENVIAR</button>
                     </form>
+                    <script>
+                        $('#contact_form').submit(function(e){
+                            e.preventDefault();
+                            $.ajax({
+                                url:$(this).attr("action"),
+                                type:'post',
+                                data:$('#contact_form').serialize(),
+                                success:function(){
+                                    alert("Se ha enviado correctamente el correo de contacto.");
+                                    document.getElementById('contact_form').reset();
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    alert("Error al enviar correo. Intenta más tarde.");
+                                    /*console.error(jqXHR);
+                                    console.error(textStatus);
+                                    console.error(errorThrown);*/
+                                }
+                        });
+                        });
+                        
+                    </script>
                 </div>
             </div>
         </div>
