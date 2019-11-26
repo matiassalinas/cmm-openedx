@@ -118,11 +118,11 @@ main.static_pages {
 */
 
 .window-wrap {
-    margin-top: 72px;
+    margin-top: 90px;
 }
 
 .content-wrapper {
-    padding: 0;
+    padding: 0 !important;
 }
 
 hr.divider {
