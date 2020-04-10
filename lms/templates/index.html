@@ -10,7 +10,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <style>
 	header.index {
-		background-image: url(${static.url('cmm-openedx/images/header.jpg')});
+		background-image: url(${static.url('cmm-openedx/images/header.png')});
 	}
 
 </style>
@@ -24,7 +24,8 @@ from openedx.core.djangolib.markup import HTML, Text
                 <hr class="divider my-4">
             </div>
             <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 font-weight-light mb-5 wow animated bounceIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                <p class="text-white-75 font-weight-light mb-5 wow animated bounceIn">Nuestra misión es proveer programas de desarrollo profesional en educación matemática que fortalezcan conocimientos y competencias clave para liderar procesos de enseñanza de la matemática, tanto en el aula escolar, como en la formación docente.
+                    En los programas de formación se plasma un enfoque pertinente con la labor de los profesionales de la educación, sustentado por la evidencia que integra estrategias innovadoras de aprendizaje basadas en la tecnología. </p>
                 <a class="btn btn-primary btn-xl js-scroll-trigger wow animated zoomIn delay-1s faster" href="/courses" target="">Explorar Cursos</a>
             </div>
             <div class="col-lg-8 align-self-baseline wow animated infinite pulse slower">
@@ -48,7 +49,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <!-- Edu Formación Section -->
 <section class="page-section bg-light" id="edu_formacion">
 	<div class="container">
-		<h2 class="text-center mt-0 wow animated fadeInDown">Qué es Edu Formación</h2>
+		<h2 class="text-center mt-0 wow animated fadeInDown">Qué es CMM Edu Formación</h2>
 		<hr class="divider my-4">
 		<div class="row wow animated fadeInUp">
 			<div class="col-md-5 my-auto">
@@ -57,16 +58,16 @@ from openedx.core.djangolib.markup import HTML, Text
 			<div class="col-md-7 my-2 text-justify">
 				<p><span class="text-primary">CMM Edu Formación</span> es una plataforma de cursos online que busca contribuir a la mejora de la calidad de la <span class="text-primary">enseñanza de la matemática escolar</span> atendiendo a las necesidades
 					de formación y desarrollo profesional de los distintos actores que componen el sistema.</p>
-				<p>Los cursos de esta plataforma han sido desarrollados por el <a href="http://www.cmm.uchile.cl/" target="_blank">Área de Educación del Centro de Modelamiento Matemático (CMM Edu) de la Universidad de Chile</a> para responder a requerimientos
-					clave en las líneas de formación inicial docente, desarrollo profesional, formación de asesores, entre otras.</p>
-				<p>El diseño de los cursos utiliza las potencialidades que ofrece la <a href="https://eol.uchile.cl/" target="_blank">Plataforma de Educación Online de la Universidad de Chile (EOL)</a>, para lograr una experiencia de aprendizaje significativa en modalidad virtual.</p>
-				</p>
+                <p>Los cursos de esta plataforma han sido desarrollados por el <a href="http://www.cmm.uchile.cl/" target="_blank">Laboratorio de Educación del Centro de Modelamiento Matemático (CMM Edu) de la Universidad de Chile</a> y están soportados por
+                     la <a href="https://eol.uchile.cl/" target="_blank">Plataforma de Educación Online de la Universidad de Chile (EOL)</a>. Los distintos programas están dirigidos a docentes en ejercicio, a profesionales involucrados en la formación inicial
+                      y desarrollo profesional docente, asesores de escuela, entre otros.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- Programas Section -->
+<!--
 <section class="page-section bg-dark" id="programas">
     <div class="container">
         <div class="row justify-content-center">
@@ -141,9 +142,9 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
     </div>
 </section>
-
+-->
 <!-- Modo Instruccional Section -->
-<section class="page-section" id="modelo_instruccional">
+<section class="page-section bg-secondary" id="modelo_instruccional">
     <div class="container">
         <h2 class="text-center mt-0 wow animated fadeInDown">Modelo Instruccional</h2>
         <hr class="divider my-4">
@@ -152,9 +153,23 @@ from openedx.core.djangolib.markup import HTML, Text
                 <img src="${static.url('cmm-openedx/images/mi_01.png')}" class="responsive-img" alt="">
             </div>
             <div class="col-md-9">
-                <h2 class="featurette-heading">Aprender haciendo</h2>
-                <p class="lead">Las actividades de aprendizaje, permiten que los participantes interactúen directamente con problemas contextualizados al ámbito escolar, y aprendan en la medida que van desarrollando los ejercicios y actividades que se despliegan
-                    en complejidad creciente.</p>
+                <h2 class="featurette-heading">Aprender en contexto</h2>
+                <p class="lead">A través del desarrollo de actividades se activan procesos de aprendizaje autónomo en entornos virtuales. Cada actividad se estructura en torno a historias situadas en contextos significativos, las que permiten articular tareas que abordan
+                     las distintas componentes de los conocimientos disciplinares y didácticos necesarios para enseñar matemática.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row featurette py-3 wow animated fadeInLeft">
+            <div class="col-md-3 text-center m-auto py-4">
+                <img src="${static.url('cmm-openedx/images/mi_03.png')}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Resolución de problemas como eje articulador</h2>
+                <p class="lead">Nuestros cursos y actividades de aprendizaje en línea, apuntan a considerar en su estructura de diseño,
+                     la resolución de problemas como elemento transversal que otorga sentido y dirección al aprendizaje.
+                </p>
             </div>
         </div>
 
@@ -176,34 +191,6 @@ from openedx.core.djangolib.markup import HTML, Text
 
         <div class="row featurette py-3 wow animated fadeInLeft">
             <div class="col-md-3 text-center m-auto py-4">
-                <img src="${static.url('cmm-openedx/images/mi_03.png')}" class="responsive-img" alt="">
-            </div>
-            <div class="col-md-9">
-                <h2 class="featurette-heading">Resolución de problemas como eje articulador</h2>
-                <p class="lead">Para desarrollar la competencia matemática, un aspecto central es la capacidad de enfrentar y resolver situaciones que escapan a nuestro marco de respuestas tradicionales. En este sentido, nuestros cursos y actividades de aprendizaje
-                    en línea, apuntan a considerar en su estructura de diseño, la resolución de problemas como elemento transversal que otorga sentido y dirección al aprendizaje.
-                </p>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row featurette py-3 wow animated fadeInLeft">
-            <div class="col-md-3 text-center m-auto py-4">
-                <img src="${static.url('cmm-openedx/images/mi_04.png')}" class="responsive-img" alt="">
-            </div>
-            <div class="col-md-9">
-                <h2 class="featurette-heading">Plataforma estable y segura</h2>
-                <p class="lead">El espacio donde se desarrollan las actividades de aprendizaje, se denomina Open Edx, y es una plataforma virtual actualizada y en desarrollo permanente, que permite la creación e impartición de cursos en línea, masivos y con una gran
-                    variedad de herramientas para la gestión del contenido y la evaluación. Ofrece gran estabilidad y sistemas de seguridad de clase mundial.
-                </p>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row featurette py-3 wow animated fadeInLeft">
-            <div class="col-md-3 text-center m-auto py-4">
                 <img src="${static.url('cmm-openedx/images/mi_05.png')}" class="responsive-img" alt="">
             </div>
             <div class="col-md-9">
@@ -216,7 +203,7 @@ from openedx.core.djangolib.markup import HTML, Text
 </section>
 
 <!-- Testimonios Section -->
-<section class="page-section bg-secondary" id="testimonios">
+<section class="page-section" id="testimonios">
     <div class="container">
         <div class="row justify-content-center wow animated fadeInDown">
             <div class="col-lg-8 text-center">
@@ -237,19 +224,19 @@ from openedx.core.djangolib.markup import HTML, Text
                         <div class="item carousel-item active">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!--<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">He tenido la gran oportunidad de conocer Suma y Sigue, como una plataforma de e-learning, diseñado para trabajar y desarrollar conceptos matemáticos. Me parece un material muy bien pensado y de hecho es un gusto
                                         encontrarse con un material de la calidad de este.</p>
                                     <p class="overview"><b>Mónica San Pedro</b>, Suma y Sigue </p>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!--<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">Mis expectativas siempre fueron bien altas y las he ido cumpliendo porque las actividades son de un nivel matemático y un nivel de abordaje que generan reflexión en cualquier persona, independiente de si uno tiene
                                         pocos años de experiencia o tiene un postgrado. También es un curso que insta a la reflexión, al trabajo colaborativo y a aprender más de matemática y a cómo enseñar esa matemática.</p>
                                     <p class="overview"><b>Nielka</b>, Curso de formadores</p>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!---<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">Ojalá, todos los profesores de mi colegio pudiesen participar en este curso, porque de alguna manera van a sentir más reforzados todos sus conocimientos y de esta manera entregar una mejor educación a nuestros niños.</p>
                                     <p class="overview"><b>Andrea Quintana</b>, Suma y Sigue</p>
                                 </div>
@@ -258,19 +245,19 @@ from openedx.core.djangolib.markup import HTML, Text
                         <div class="item carousel-item">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!--<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">Creo que es potentísimo el poder compartir con otros colegas que vivimos las mismas experiencias durante mucho tiempo y que nunca hemos tenido la oportunidad de establecer una interacción con pares, no es cierto,
                                         que trabajamos en lo mismo; yo creo que esta oportunidad que se tiene hoy día para nosotros es única y es inédita. </p>
                                     <p class="overview"><b>Rene Barraza</b>, Curso de formadores </p>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!--<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">A mi me ha sido de gran utilidad porque me ha permitido replantear la forma en que yo tengo que entregar los conocimientos para un futuro profesor, que no es lo mismo que si yo estuviese enseñando matemática a un
                                         ingeniero, aquí hay una reflexión, análisis, una argumentación, entonces esto me ha hecho ver de otra manera mi práctica pedagógica para con los futuros docentes. </p>
                                     <p class="overview"><b>Ximena Gajardo</b>, Curso de formadores</p>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>
+                                    <!--<div class="img-box"><img src="${static.url('cmm-openedx/images/testimonio1.png')}" alt=""></div>-->
                                     <p class="testimonial">La participación sobre todo es activa, porque en el caso mío, también lo llevo a la práctica con los niños. Entonces, sobretodo en la parte de resolución de problemas, es totalmente activa porque tu estás pasando
                                         algunos contenidos y lo llevas a la práctica con lo que estás aprendiendo acá en el curso.</p>
                                     <p class="overview"><b>Renzo León</b>, Suma y Sigue</p>
