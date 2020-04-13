@@ -10879,7 +10879,7 @@ html {
 }
 
 .text-white-75 {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 1.75);
 }
 
 hr.divider {
@@ -10984,7 +10984,7 @@ hr.light {
 }
 
 header.masthead {
-    padding-top: 10rem;
+    /*padding-top: 10rem;*/
     padding-bottom: calc(10rem - 72px);
     background-position: center;
     background-repeat: no-repeat;
