@@ -49,3 +49,53 @@ button.save.problem-action-btn {
 	display: none!important;
 }
 
+/* Drag and Drop */
+
+.course-wrapper  .xblock--drag-and-drop {
+	margin: auto!important;
+}
+
+.course-wrapper  .xblock--drag-and-drop .problem-progress{
+	display:none!important;
+}
+  
+/*.course-wrapper  .xblock--drag-and-drop .show-answer-button{
+	display:none!important;
+}*/
+
+.course-wrapper  .xblock--drag-and-drop .feedback-content .title1{
+	display:none!important;
+}
+  
+.course-wrapper  .xblock--drag-and-drop .drag-container .option{
+	margin: 0px!important;
+	background-color: transparent!important;
+}
+
+.course-wrapper  .xblock--drag-and-drop .drag-container {
+	background-color: transparent!important;
+}
+
+.course-wrapper  .xblock--drag-and-drop .item-bank {
+	border:none!important;
+}
+
+.course-wrapper  .xblock--drag-and-drop .keyboard-help-button {
+	display: none!important;
+}
+
+.course-wrapper  .xblock--drag-and-drop .btn-brand:disabled, .xblock--drag-and-drop .btn-brand.is-disabled {
+	background: #f2f3f3!important;
+}
+
+.course-wrapper .xblock--drag-and-drop .btn-brand {
+	background-color: #E71F24 !important;
+	border: 0px !important;
+	box-sizing: border-box !important;
+	border-radius: 10px !important;
+	padding: 8px 20px !important;
+}
+
+.course-wrapper .xblock--drag-and-drop .popup.popup-incorrect {
+	display:none!important;
+}
