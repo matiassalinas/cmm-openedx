@@ -8,11 +8,10 @@
 from django.urls import reverse
 from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
-from six import text_type
 %>
 
 <%
-  show_explore_courses = settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing
+  show_explore_courses = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
   show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff
   self.real_user = getattr(user, 'real_user', user)
 
@@ -25,15 +24,6 @@ from six import text_type
     help_link = support_link
   else:
     help_link = doc_link
-
-  active_dashboard = reverse('dashboard') == request.path
-  active_program_list = reverse('program_listing_view') in request.path
-  active_user_profile = '/u/' in request.path
-  active_explore = marketing_link('COURSES') == request.path
-  if not (active_dashboard or active_program_list or active_user_profile or active_explore):
-    active_dashboard = True
-
-  is_about = course and (request.path == reverse('about_course', args=[text_type(course.id)]))
 %>
 
 <div class="collapse navbar-collapse" id="navbarResponsive">
