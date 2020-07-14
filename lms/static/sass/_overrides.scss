@@ -49,6 +49,16 @@ button.save.problem-action-btn {
 	display: none!important;
 }
 
+/* encuesta inicial */
+
+.tablaenc .field input {
+    left: 38%!important;
+}
+
+.tablaenc td fieldset{
+  	padding-top:0%;
+}
+
 /* Drag and Drop */
 
 .course-wrapper  .xblock--drag-and-drop {
