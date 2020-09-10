@@ -20,7 +20,6 @@ from openedx.core.djangolib.js_utils import (
   });
 </%block>
 <%block name="content">
-<script type="text/javascript" src="https://static.sumaysigue.uchile.cl/cmmeduformacion/produccion/assets/js/buscador.js"></script>
 <div class="wrapper-mast wrapper">
   <header class="mast has-actions">
     <h1 class="page-header">${_("{studio_name} Home").format(studio_name=settings.STUDIO_SHORT_NAME)}</h1>
@@ -29,6 +28,21 @@ from openedx.core.djangolib.js_utils import (
     <nav class="nav-actions" aria-label="${_('Page Actions')}">
       <h3 class="sr">${_("Page Actions")}</h3>
 
+      <script type="text/javascript">
+        $(function(){
+          $(".input-search-course-title").keyup(function() {
+            $( "li.course-item" ).each(function( index ) {
+            var s = $( this ).find('.course-link').attr('href')+" "+$(this).find('.course-title').text();
+            if(s.toLowerCase().includes($(".input-search-course-title").val().toLowerCase())){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+            });
+          });
+        })
+      </script>
       <ul>
         <span class="span-search-course-title">
           Buscar:<input class="input-search-course-title" type="text" />
