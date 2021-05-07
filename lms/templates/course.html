@@ -1,5 +1,4 @@
-<%def name="online_help_token()"><% return "course" %>
-</%def>
+<%def name="online_help_token()"><% return "course" %></%def>
 <%namespace name='static' file='static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
@@ -8,9 +7,8 @@ from six import text_type
 
 from django.utils import timezone
 now = timezone.now()
-
 %>
-    <%page args="course, categ" expression_filter="h"/>
+<%page args="course, categ" expression_filter="h"/>
 
 <div id="${course.id}" class="my-sm-3 col-lg-6 col-xl-4 h-100 filter ${categ['name']}">
     <a class="course-link" href="${reverse('about_course', args=[text_type(course.id)])}">
@@ -49,6 +47,6 @@ now = timezone.now()
     </a>
 </div>
 
-            <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
     DateUtilFactory.transform(iterationKey=".localized_datetime");
 </%static:require_module_async>

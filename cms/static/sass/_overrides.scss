@@ -13,8 +13,8 @@
 }
 
 .wrapper-header .branding a img {
-    height: 65px !important;
-    max-height: 65px !important;
+    height: 30px !important;
+    max-height: 30px !important;
 }
 
 .location-footer {
@@ -59,4 +59,12 @@
 
 button.save.problem-action-btn {
 	display: none!important;
+}
+
+li.course-item[data-course-key^="course-v1:cmm+SYSELEAR"] {
+    background-color: #ea923a!important;
+}
+
+li.course-item[data-course-key^="course-v1:cmm+SYSMEDIA"] {
+    background-color: #e148ec!important;
 }

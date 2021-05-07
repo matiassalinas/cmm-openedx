@@ -4,12 +4,12 @@
   from django.utils.translation import ugettext as _
   from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
 %>
-    <%inherit file="../main.html" />
+<%inherit file="../main.html" />
 <%
   course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
 %>
 
-        <%namespace name='static' file='../static_content.html'/>
+<%namespace name='static' file='../static_content.html'/>
 
 % if course_discovery_enabled:
 <%block name="header_extras">
@@ -29,10 +29,8 @@
 </%block>
 % endif
 
-<%! from course_info.helpers import get_course_class %>
-<% cats,course_class = get_course_class(courses) %>
-<%block name="pagetitle">${_("Courses")}</%block>
-
+<%! from lms.djangoapps.course_info.helpers import get_course_class %>
+<%  cats,course_class = get_course_class(courses) %>
 <style>
     header.courses {
       background-image: url(${static.url('cmm-openedx/images/header_courses.png')});
