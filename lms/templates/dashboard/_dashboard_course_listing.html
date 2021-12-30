@@ -45,6 +45,7 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
 
 <%namespace name='static' file='../static_content.html'/>
 
+% if course_overview.catalog_visibility != "about":
 <li class="course-item ${course_eol_class}">
   % if display_course_modes_on_dashboard:
     <%
@@ -477,4 +478,6 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
       }
 
     </%static:require_module_async>
+%endif
+
 %endif
