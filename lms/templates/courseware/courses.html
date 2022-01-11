@@ -77,7 +77,7 @@
                 <button type="button" class="btn btn-xl text-white m-2 filter-button active" data-filter="todos">Todos</button>
                 <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="cmm-fpd">Formación Profesional Docente</button>
                 <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="cmm-fi">Formación Inicial</button>
-                <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="sence">Sence</button>
+                <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="cmm-sence">Sence</button>
             </div>
         </div>
         -->
@@ -91,7 +91,7 @@
             <div class="row wow animated zoomIn">
               %for categ in cats:
               <!-- only Sence -->
-                %if (sencecourses and categ['name'] == "sence"):
+                %if (sencecourses and categ['name'] == "cmm-sence"):
                     %for course in course_class[categ['id']]['courses']:
                         <%include file="../course.html" args="course=course, categ=categ" />
                     %endfor
