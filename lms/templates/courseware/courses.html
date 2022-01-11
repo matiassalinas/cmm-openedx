@@ -31,6 +31,12 @@
 
 <%! from lms.djangoapps.course_info.helpers import get_course_class %>
 <%  cats,course_class = get_course_class(courses) %>
+
+<% sencecourses = False %>
+% if request.GET.get("cat") == "sence":
+    <% sencecourses = True %>
+% endif
+
 <style>
     header.courses {
       background-image: url(${static.url('cmm-openedx/images/header_courses.png')});
@@ -43,12 +49,16 @@
     <div class="container h-100">
         <div class="row h-100 align-items-end justify-content-center text-center">
             <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold wow animated fadeInDown">Cursos</h1>
+                %if sencecourses:
+                    <h1 class="text-uppercase text-white font-weight-bold wow animated fadeInDown">Cursos Sence</h1>
+                %else:
+                    <h1 class="text-uppercase text-white font-weight-bold wow animated fadeInDown">Cursos</h1>
+                %endif
                 <hr class="divider my-4">
             </div>
-            <div class="col-lg-8 align-self-baseline">
+            <!--<div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 font-weight-light mb-5 wow animated bounceIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-            </div>
+            </div>-->
             <div class="col-lg-8 align-self-baseline wow animated infinite pulse slower">
                 <a class="text-white js-scroll-trigger" style="text-decoration: none;" href="#courses">
 					<i class="fas fa-angle-double-down fa-4x"></i>
@@ -61,21 +71,31 @@
 <main id="main" aria-label="Content" tabindex="-1">
     <!-- Courses Section -->
     <section class="page-section" id="courses">
+        <!--
         <div class="row text-center courses-filter">
             <div class="mx-auto my-3 wow animated fadeInDown">
                 <button type="button" class="btn btn-xl text-white m-2 filter-button active" data-filter="todos">Todos</button>
                 <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="cmm-fpd">Formación Profesional Docente</button>
                 <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="cmm-fi">Formación Inicial</button>
+                <button type="button" class="btn btn-xl text-white m-2 filter-button" data-filter="sence">Sence</button>
             </div>
         </div>
+        -->
         <div class="container">
-            <h2 class="text-center wow animated fadeInDown">Cursos</h2>
+            %if not sencecourses:
+                <h2 class="text-center wow animated fadeInDown">Cursos</h2>
+            %else:
+                <h2 class="text-center wow animated fadeInDown">Cursos Sence</h2>
+            %endif
             <hr class="divider my-4">
             <div class="row wow animated zoomIn">
               %for categ in cats:
-                 %for course in course_class[categ['id']]['courses']:
-                  <%include file="../course.html" args="course=course, categ=categ" />
-                  %endfor
+              <!-- only Sence -->
+                %if (sencecourses and categ['name'] == "sence"):
+                    %for course in course_class[categ['id']]['courses']:
+                        <%include file="../course.html" args="course=course, categ=categ" />
+                    %endfor
+                %endif
               %endfor
             </div>
         </div>
