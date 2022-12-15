@@ -11071,3 +11071,16 @@ header.masthead h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
 }
+/*
+* Genially
+*/
+.genially-embed .genially-view-arrow-right, .genially-lightbox-modal .genially-view-arrow-right, 
+.genially-embed .genially-view-arrow-right:hover, .genially-lightbox-modal .genially-view-arrow-right:hover,
+.genially-embed .genially-view-arrow-right:active, .genially-lightbox-modal .genially-view-arrow-right:active,
+.genially-view-icon,.genially-view-icon:hover,.genially-view-icon:active,
+.genially-view-navigation-actions-toggle-button,.genially-view-navigation-actions-toggle-button:hover,.genially-view-navigation-actions-toggle-button:active,
+.genially-embed .genially-view-background_audio_notice-container.genially-view-background_audio_notice-hidden{
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
