@@ -61,16 +61,18 @@ button.save.problem-action-btn {
 	display: none!important;
 }
 
-li.course-item[data-course-key^="course-v1:cmm+SYSELEAR"] {
-    background-color: #ea923a!important;
+li.course-item[data-course-key^="course-v1:cmm+SYSELEAR"] { //Basica Elearning
+    background-color: #fbb978!important;
 }
 
-li.course-item[data-course-key^="course-v1:cmm+SYSBLEAR"] {
-    background-color: #8bebf8!important;
+li.course-item[data-course-key^="course-v1:cmm+SYSBLEAR"] { //Basica Bilearning
+    background-color: #d0fcf4!important;
 }
 
-
-li.course-item[data-course-key^="course-v1:cmm+SYSMEDIA"] {
-    background-color: #e148ec!important;
+li.course-item[data-course-key^="course-v1:cmm+SYSMEDIA"] { //Media Elearning
+    background-color: #f27cfb!important;
 }
 
+li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] { //Media Bilearning
+    background-color: #c463f8!important;
+}
