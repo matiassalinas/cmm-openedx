@@ -296,3 +296,26 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] { //Media Bilearning
    .TitleRecapi.basica:before{
   	background-color: #dc0000;
   }
+
+//Recuadros
+
+.recuadroSYS {
+    background-color:#f0f0f1;
+    width:fit-content;
+    margin:auto;
+    padding:30px;
+    padding-bottom: 12px;
+    border-radius:12px;
+  }
+    
+  .recuadroSYS.celeste{
+    background-color:#e4e9ff;
+  }
+  
+  .recuadroSYS.rosado{
+    background-color:#f7e5eb;
+  }
+
+  .recuadroSYS.verde{
+    background-color:#8df0ca;
+  }
