@@ -543,6 +543,15 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
   padding-right: 32px;
 }
 
+.dashedline-SPrime {
+  border: none;
+  border-top: 4px dotted; /* Estilo punteado */
+  width: 50%; /* Ajusta el ancho según lo necesites */
+  margin: 0 auto; /* Centrado horizontal */
+  height: 0;
+  border-color: #c600ff;
+}
+
 //Recuadros
 
 .recuadroSYS {
