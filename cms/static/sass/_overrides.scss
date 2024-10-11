@@ -247,272 +247,257 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
 
 
 //banner sumo primero
-
-.sprbanner.azul {
-    position: relative;
-    display: flex;
-    align-items: center;
+.sprbanner {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.sprbanner.azul hr {
-    background-color: #0281cc;
-    flex-grow: 1;
-    border-top: 28px solid #0281cc;
-    border-left: 0px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 28px solid #0281cc;
-    border-radius: 16px;
+.sprbanner hr {
+  background-color: #a9edd4;
+  flex-grow: 1;
+  border-top: 28px solid #a9edd4;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 28px solid #a9edd4;
+  border-radius: 16px;
 }
-  
-  .sprbanner.azul .banner-text {
-    font-size: 22px;
-      font-weight: bold;
-      color: white;
-      margin-left: 80px;
-      position: absolute;
-  }
 
-
-.sprbanner.azul .icon-box {
-    width: 85px;
-    height: 85px;
-    background-color: #0281cc;
-    background-image: url(https://static.sumaysigue.uchile.cl/cmmeduformacion/produccion/assets/img/banner_symbol_libreta.png);
-    background-repeat: no-repeat;
-    background-size: auto 65%;
-    background-position: 21px center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    position: absolute;
-    z-index: 2;
-    left: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 22px;
-    color: white;
+.sprbanner .banner-text {
+  font-family: "Sassoon Sans Std Bold";
+  font-size: 22px;
     font-weight: bold;
-    border-radius: 50%;
+    color: white;
+    margin-left: 85px;
+    position: absolute;
+   -webkit-text-stroke-width: 1.64px;
+  -webkit-text-stroke-color: #51b18f;
 }
 
 
-////Tabla SYS
+.sprbanner .icon-box {
+  width: 85px;
+  height: 85px;
+  background-color: #51b18f;
+  background-image: url(https://static.sumaysigue.uchile.cl/cmmeduformacion/produccion/assets/img/banner_symbol_libreta.png?=90);
+  background-repeat: no-repeat;
+  background-size: auto 65%;
+  background-position: 21px center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  position: absolute;
+  z-index: 2;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+
+////Tabla Suma y Sigue
 .tableSYS {
-    border-collapse: separate !important;
-    border-spacing: 0 !important;
-    min-width: 350px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  min-width: 350px !important;
 }
 
 .tableSYS tr th,
 .tableSYS tr td {
-    border-right: 2px solid #bbb !important;
-    border-bottom: 1px solid #bbb !important;
-    border-top: 1px solid #bbb !important;
-    padding: 12px !important;
+  border-right: 2px solid #bbb !important;
+  border-bottom: 1px solid #bbb !important;
+  border-top: 1px solid #bbb !important;
+  padding: 12px !important;
 }
 
 .tableSYS tr th:first-child,
 .tableSYS tr td:first-child {
-    border-left: 2px solid #bbb !important;
+  border-left: 2px solid #bbb !important;
 }
 
 
 .tableSYS thead tr:first-child th,
 .tableSYS thead tr:first-child td {
-    border-top: 2px solid #bbb !important;
+  border-top: 2px solid #bbb !important;
 }
 
 .tableSYS tr:last-child th,
 .tableSYS tr:last-child td {
-    border-bottom: 2px solid #bbb !important;
+  border-bottom: 2px solid #bbb !important;
 }
 
 /*Bordes redondeados superiores*/
 
 .tableSYS thead tr:first-child th:first-child,
 .tableSYS thead tr:first-child td:first-child {
-    border-top-left-radius: 16px !important;
+  border-top-left-radius: 16px !important;
 }
 
 .tableSYS thead tr:first-child th:last-child,
 .tableSYS thead tr:first-child td:last-child {
-    border-top-right-radius: 16px !important;
+  border-top-right-radius: 16px !important;
 }
 
 /*Bordes redondeados Inferiores*/
 
 .tableSYS tbody tr:last-child th:first-child,
 .tableSYS tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
 }
 
 .tableSYS tbody tr:last-child th:last-child,
 .tableSYS tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 16px !important;
-}
-
-/* Caso que no exista encabezado */
-
-.tableSYS.nothead tr:first-child th,
-.tableSYS.nothead tr:first-child td {
-    border-top: 2px solid #bbb !important;
-}
-
-.tableSYS.nothead tbody tr:first-child th:first-child,
-.tableSYS.nothead tbody tr:first-child td:first-child {
-    border-top-left-radius: 16px !important;
-}
-
-.tableSYS.nothead tbody tr:first-child th:last-child,
-.tableSYS.nothead tbody tr:first-child td:last-child {
-    border-top-right-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
 }
 
 ////Tabla Sumo Primero
 
 .tableSPrime {
-    border-collapse: separate !important;
-    border-spacing: 0 !important;
-    min-width: 350px !important;
-    position: relative;
-  }
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  min-width: 350px !important;
+  position: relative;
+}
+
+.tableSPrime-wrapper {
+  border: 3.5px solid #f58220 !important; 
+  z-index: 1;
+  border-radius: 16px; /* Esquinas redondeadas del borde */
+  padding: 0; /* Sin padding adicional */
+}
+
+.tableSPrime tr th,
+.tableSPrime tr td {
+  border-right: 2px solid #bbb !important; 
+  border-bottom: 1px solid #bbb !important;
+  border-top: 2px solid #bbb !important;
+  padding: 12px !important;
+  text-align: center; /* Centra el contenido */
+}
+
+.tableSPrime tr th:first-child {
+  border-left: 3.5px solid #0281cc !important;
+  border-color: #0281cc !important;
+}
+
+.tableSPrime tr td:first-child {
+  border-left: 3.5px solid #f58220 !important;
+  z-index: 1;
+}
+
+.tableSPrime thead tr:first-child th,
+.tableSPrime thead tr:first-child td {
+  border-top: 2px solid #0281cc !important;
+  background-color: #0281cc !important;
+  color: white !important; /* El texto del encabezado en blanco */
+  font-weight: bold !important; /* Texto en negrita */
+}
   
-  .tableSPrime-wrapper {
-    border: 3.5px solid #f58220 !important; 
-    z-index: 1;
-    border-radius: 16px; /* Esquinas redondeadas del borde */
-    padding: 0; /* Sin padding adicional */
-  }
+.tableSPrime tr th:last-child {
+  border-right: 3.5px solid #0281cc !important;
+}
+
   
-  .tableSPrime tr th,
-  .tableSPrime tr td {
-    border-right: 2px solid #bbb !important; 
-    border-bottom: 1px solid #bbb !important;
-    border-top: 2px solid #bbb !important;
-    padding: 12px !important;
-    text-align: center; /* Centra el contenido */
-  }
-  
-  .tableSPrime tr th:first-child {
-    border-left: 3.5px solid #0281cc !important;
-    border-color: #0281cc !important;
-  }
-  
-  .tableSPrime tr td:first-child {
-    border-left: 3.5px solid #f58220 !important;
-    z-index: 1;
-  }
-  
-  .tableSPrime thead tr:first-child th,
-  .tableSPrime thead tr:first-child td {
-    border-top: 2px solid #0281cc !important;
-    background-color: #0281cc !important;
-    color: white !important; /* El texto del encabezado en blanco */
-    font-weight: bold !important; /* Texto en negrita */
-  }
-    
-  .tableSPrime tr th:last-child {
-    border-right: 3.5px solid #0281cc !important;
-  }
-  
-    
-  .tableSPrime tr td:last-child {
-    border-right: 3.5px solid #f58220 !important;
-    z-index: 1;
-  }
-  
-  
-  .tableSPrime tr:last-child th {
-    border-bottom: 3.5px solid #0281cc !important;
-  }
-  .tableSPrime tr:last-child td {
-    border-bottom: 3.5px solid #f58220 !important;
-    z-index: 1;
-  }
-  
-  /* Bordes redondeados superiores */
-  .tableSPrime thead tr:first-child th:first-child,
-  .tableSPrime thead tr:first-child td:first-child {
-    border-top-left-radius: 16px !important;
-  }
-  
-  .tableSPrime thead tr:first-child th:last-child,
-  .tableSPrime thead tr:first-child td:last-child {
-    border-top-right-radius: 16px !important;
-  }
-  
-  /* borde superior para primera fila del body no visible*/
-  .tableSPrime tbody tr:first-child td {
-    border-top: 0px !important;
-  }
-  
-  /* Bordes redondeados inferiores */
-  .tableSPrime tbody tr:last-child th:first-child,
-  .tableSPrime tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 16px !important;
-  }
-  
-  .tableSPrime tbody tr:last-child th:last-child,
-  .tableSPrime tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 16px !important;
-  }
-  
-  /* Caso que no exista encabezado */
-  .tableSPrime.nothead tr:first-child th,
-  .tableSPrime.nothead tr:first-child td {
-    border-top: 3.5px solid #f58220 !important;
-    z-index: 1;
-  }
-  
-  .tableSPrime.nothead tbody tr:first-child th:first-child,
-  .tableSPrime.nothead tbody tr:first-child td:first-child {
-    border-top-left-radius: 16px !important;
-  }
-  
-  .tableSPrime.nothead tbody tr:first-child th:last-child,
-  .tableSPrime.nothead tbody tr:first-child td:last-child {
-    border-top-right-radius: 16px !important;
-  }  
+.tableSPrime tr td:last-child {
+  border-right: 3.5px solid #f58220 !important;
+  z-index: 1;
+}
+
+
+.tableSPrime tr:last-child th {
+  border-bottom: 3.5px solid #0281cc !important;
+}
+.tableSPrime tr:last-child td {
+  border-bottom: 3.5px solid #f58220 !important;
+  z-index: 1;
+}
+
+/* Bordes redondeados superiores */
+.tableSPrime thead tr:first-child th:first-child,
+.tableSPrime thead tr:first-child td:first-child {
+  border-top-left-radius: 16px !important;
+}
+
+.tableSPrime thead tr:first-child th:last-child,
+.tableSPrime thead tr:first-child td:last-child {
+  border-top-right-radius: 16px !important;
+}
+
+/* borde superior para primera fila del body no visible*/
+.tableSPrime tbody tr:first-child td {
+  border-top: 0px !important;
+}
+
+/* Bordes redondeados inferiores */
+.tableSPrime tbody tr:last-child th:first-child,
+.tableSPrime tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px !important;
+}
+
+.tableSPrime tbody tr:last-child th:last-child,
+.tableSPrime tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px !important;
+}
+
+/* Caso que no exista encabezado */
+.tableSPrime.nothead tr:first-child th,
+.tableSPrime.nothead tr:first-child td {
+  border-top: 3.5px solid #f58220 !important;
+  z-index: 1;
+}
+
+.tableSPrime.nothead tbody tr:first-child th:first-child,
+.tableSPrime.nothead tbody tr:first-child td:first-child {
+  border-top-left-radius: 16px !important;
+}
+
+.tableSPrime.nothead tbody tr:first-child th:last-child,
+.tableSPrime.nothead tbody tr:first-child td:last-child {
+  border-top-right-radius: 16px !important;
+}
 
 
 //Recapitulemos
 .TitleRecapi:before {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 62px;
-    float: left;
-    margin: 0 6px 0 0;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 62px;
+  float: left;
+  margin: 0 6px 0 0;
 
 
 }
 
 .TitleRecapi {
-    font-family: 'Open Sans';
-    height: 64px;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 600;
-    vertical-align: middle;
-    display: ruby-base-container;
+  font-family: 'Open Sans';
+  height: 64px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  vertical-align: middle;
+  display: ruby-base-container;
 }
 
 .TitleRecapi.media {
-    color: #612871;
+  color: #612871;
 }
 
 .TitleRecapi.media:before {
-    background-color: #612871;
+  background-color: #612871;
 }
 
 
 .TitleRecapi.basica {
-    color: #dc0000;
+  color: #dc0000;
 }
 
 .TitleRecapi.basica:before {
-    background-color: #dc0000;
+  background-color: #dc0000;
 }
 
 //Banner titulo Sumo primero
@@ -520,7 +505,7 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
 .banner-sprime-title {
 	display: flex;
   align-items: center;
-  background-color: #2b6777;
+  background-color: #ea91bd;
   border-radius: 20px;
   padding: 16px 24px;
   width: fit-content;
@@ -536,22 +521,24 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
 }
 
 .banner-sprime-text {
+  font-family: "Sassoon Sans Std Bold";
   font-size: 24px;
   color: white;
   font-weight: bold;
   padding-left: 114px;
   padding-right: 32px;
+  -webkit-text-stroke-width: 1.64px;
+  -webkit-text-stroke-color: #dc4b91;
 }
 
 .dashedline-SPrime {
   border: none;
-  border-top: 4px dotted; /* Estilo punteado */
-  width: 50%; /* Ajusta el ancho según lo necesites */
-  margin: 0 auto; /* Centrado horizontal */
+  border-top: 4px dotted; 
+  width: 50%; 
+  margin: 0 auto;
   height: 0;
-  border-color: #c600ff;
+  border-color: #871980!important;
 }
-
 //Recuadros
 
 .recuadroSYS {
