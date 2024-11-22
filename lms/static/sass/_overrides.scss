@@ -40,7 +40,9 @@
   font-style: normal;
 }
 
-
+.MathJax_Display{
+  pointer-events: none;
+}
 
 .course-wrapper .course-content .vert-mod .vert {
   border-bottom: none !important;
