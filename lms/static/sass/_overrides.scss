@@ -673,3 +673,16 @@ button.save.problem-action-btn {
   height: 132px;
   margin-bottom: 50px;
 }
+
+//Didactica
+  /*texto revisemos el caso, como seguimos, etc */
+  p.title-como-seguimos{
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #E71F23;
+    padding: 5px 0 5px 20px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 25px!important;
+    color: #636f6f !important;
+}

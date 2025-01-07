@@ -342,6 +342,16 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
 }
 
 
+.subrayado-observacion {
+  display: inline;
+  text-decoration: underline;
+}
+
+.observacion-parrafo {
+  text-align: justify;
+  display: inline;
+}
+
 ////Tabla Suma y Sigue
 .tableSYS {
   border-collapse: separate !important;
@@ -637,3 +647,17 @@ li.course-item[data-course-key^="course-v1:cmm+SYSBEDIA"] {
   height: 132px;
   margin-bottom: 50px;
 }
+
+//Didactica
+  /*texto revisemos el caso, como seguimos, etc */
+  p.title-como-seguimos{
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #E71F23;
+    padding: 5px 0 5px 20px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 25px!important;
+    color: #636f6f !important;
+}
+
